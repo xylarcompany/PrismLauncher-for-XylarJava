@@ -1,2 +1,3 @@
 # XylarJava
-XylarJava is a fast launcher for Minecraft Java Edition. Users must own Minecraft Java to access it. It optimizes loading times for a smoother and quicker gameplay experience.
+
+XylarJava is a secure, open-source Java launcher for Minecraft that works completely offline. Lightweight, customizable, and designed for smooth gameplay without compromising safety.
