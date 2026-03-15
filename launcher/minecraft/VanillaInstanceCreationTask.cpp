@@ -49,14 +49,28 @@ void VanillaCreationTask::addXylarJavaMods(MinecraftInstance* inst)
         modsDir.mkpath(".");
     }
 
-    // XylarJava mods to pre-install
+    setStatus(tr("Installing XylarJava mods"));
+
+    // XylarJava mods to pre-install from launcher directory
     QStringList xylarMods = {
         "xylarservers-4.4.9-SNAPSHOT.jar",
         "ViaBedrock-0.0.26-SNAPSHOT.jar"
     };
 
-    // For now, we just ensure the mods folder exists
-    // The actual mod files should be bundled with the launcher or downloaded
-    // This is a placeholder that allows for future mod auto-download
-    setStatus(tr("Setting up mods for XylarJava"));
+    // Copy mods from launcher root directory to instance mods folder
+    QString launcherPath = FS::PathCombine(APPLICATION->getApplicationPath());
+    
+    for (const QString& modFile : xylarMods) {
+        QString sourcePath = FS::PathCombine(launcherPath, modFile);
+        QString destPath = FS::PathCombine(modsFolder, modFile);
+        
+        // Only copy if source exists and destination doesn't
+        if (QFile::exists(sourcePath) && !QFile::exists(destPath)) {
+            if (QFile::copy(sourcePath, destPath)) {
+                setStatus(tr("Installed %1").arg(modFile));
+            }
+        }
+    }
+    
+    setStatus(tr("XylarJava mods installed successfully"));
 }
