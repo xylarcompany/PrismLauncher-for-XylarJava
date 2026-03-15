@@ -1,0 +1,9 @@
+Package: ecm
+Version: 6.7.0
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ba00edc2fb360f992cb5c4ddbf31fa965afdf13f5cffa2e045964d8412814fa4
+Description: Extra CMake Modules (ECM), extra modules and scripts for CMake
+Status: install ok half-installed

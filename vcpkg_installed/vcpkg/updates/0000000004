@@ -1,0 +1,8 @@
+Package: cmark
+Version: 0.31.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 02b8a175af32eba2010fd9eff7dd2159e911b82a22ce2277ba83283667e6d356
+Description: CommonMark parsing and rendering library
+Status: install ok half-installed
