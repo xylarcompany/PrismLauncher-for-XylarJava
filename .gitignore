@@ -1,0 +1,12 @@
+﻿bin/
+obj/
+publish/
+.vs/
+*.exe
+*.dll
+*.pdb
+*.user
+*.log
+*.cache
+.DS_Store
+Thumbs.db
