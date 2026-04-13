@@ -10,3 +10,7 @@ publish/
 *.cache
 .DS_Store
 Thumbs.db
+
+# Allow the release EXE to be tracked
+!release/
+!release/*.exe
